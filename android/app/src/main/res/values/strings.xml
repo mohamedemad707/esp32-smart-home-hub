@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Home Hub</string>
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_out">Sign out</string>
+
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="lamp">Lamp</string>
+
+    <string name="last_update">Last update: %1$s</string>
+    <string name="lamp_state">Actual lamp state: %1$s</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+
+    <string name="connected">Connected to Firebase</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="enter_credentials">Enter your email and password</string>
+    <string name="login_failed">Sign-in failed: %1$s</string>
+    <string name="command_failed">Failed to send command: %1$s</string>
+</resources>

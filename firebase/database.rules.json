@@ -1,0 +1,40 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "hub": {
+      ".read": "auth != null && (auth.uid === 'REPLACE_WITH_DEVICE_UID' || auth.uid === 'REPLACE_WITH_YOUR_APP_UID')",
+
+      "temperature": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_DEVICE_UID'",
+        ".validate": "newData.isNumber() && newData.val() > -50 && newData.val() < 150"
+      },
+      "humidity": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_DEVICE_UID'",
+        ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+      },
+      "updatedAt": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_DEVICE_UID'",
+        ".validate": "newData.isNumber()"
+      },
+      "relayState": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_DEVICE_UID'",
+        ".validate": "newData.isBoolean()"
+      },
+
+      "relay": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_YOUR_APP_UID'",
+        ".validate": "newData.isBoolean()"
+      }
+    },
+
+    "config": {
+      ".read": "auth != null && (auth.uid === 'REPLACE_WITH_DEVICE_UID' || auth.uid === 'REPLACE_WITH_YOUR_APP_UID')",
+      "tempThreshold": {
+        ".write": "auth != null && auth.uid === 'REPLACE_WITH_YOUR_APP_UID'",
+        ".validate": "newData.isNumber()"
+      }
+    }
+  }
+}

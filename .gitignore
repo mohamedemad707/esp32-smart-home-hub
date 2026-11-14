@@ -1,0 +1,22 @@
+# Secrets - never commit these
+secrets.h
+google-services.json
+local.properties
+*.jks
+*.keystore
+
+# Android / Gradle
+.gradle/
+build/
+.idea/
+*.iml
+captures/
+.cxx/
+
+# Firebase Functions
+firebase/functions/node_modules/
+.firebase/
+*-debug.log
+
+# OS
+.DS_Store
